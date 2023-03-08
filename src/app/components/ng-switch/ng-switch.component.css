@@ -1,0 +1,27 @@
+.articleSubject {
+    width: min-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 20px;
+    background-color: green;
+    color: white;
+}
+.notArticleSubject {
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 20px;
+    background-color: red;
+    color: white;
+}
+
+#switchTestContainer {
+    width: 860px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+
+img {
+    width: 100%;
+}
