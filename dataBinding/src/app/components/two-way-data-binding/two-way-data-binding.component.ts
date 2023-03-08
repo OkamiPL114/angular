@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./two-way-data-binding.component.css']
 })
 export class TwoWayDataBindingComponent {
-
+  text: string = "Witom!";
 }
