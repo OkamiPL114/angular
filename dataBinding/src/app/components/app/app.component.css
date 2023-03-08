@@ -1,0 +1,13 @@
+h1 {
+    text-align: center;
+}
+button {
+    margin-left: 12.5%;
+    padding: 10px;
+}
+.sectionInvis {
+    display: none;
+}
+.sectionVis {
+    display: block;
+}
