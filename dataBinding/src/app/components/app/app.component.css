@@ -1,8 +1,11 @@
 h1 {
     text-align: center;
 }
+#buttons {
+    display: flex;
+    justify-content: space-around;
+}
 button {
-    margin-left: 12.5%;
     padding: 10px;
 }
 .sectionInvis {

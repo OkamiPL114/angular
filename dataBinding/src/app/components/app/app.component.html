@@ -1,9 +1,11 @@
 <h1>Wiązanie danych</h1>
 
-<button id="property-binding" (click)="propertyClick()">Property binding</button>
-<button id="string-interpolation" (click)="stringClick()">String interpolation</button>
-<button id="event-binding" (click)="eventClick()">Event binding</button>
-<button id="two-way-data-binding" (click)="twoWayClick()">Two-way data binding</button>
+<div id="buttons">
+    <button id="property-binding" (click)="propertyClick()">Property binding</button>
+    <button id="string-interpolation" (click)="stringClick()">String interpolation</button>
+    <button id="event-binding" (click)="eventClick()">Event binding</button>
+    <button id="two-way-data-binding" (click)="twoWayClick()">Two-way data binding</button>
+</div>
 
 <div class="bindings">
     <app-property-binding [ngClass]="isVisible1"></app-property-binding>
