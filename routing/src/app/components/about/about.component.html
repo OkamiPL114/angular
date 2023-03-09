@@ -1,1 +1,13 @@
-<p>about works!</p>
+<p>O nas</p>
+
+<ul>
+    <li>
+        <a [routerLink]="['/about/realizations']">Nasze realizacje</a>
+    </li>
+    <li>
+        <a [routerLink]="['/about/locations']">Nasze lokalizacje</a>
+    </li>
+    <div class="outer-outlet">
+        <router-outlet></router-outlet>
+    </div>
+</ul>
