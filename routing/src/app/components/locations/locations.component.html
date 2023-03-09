@@ -1,1 +1,26 @@
-<p>Jesteśmy w Polsce!</p>
+<h2 style="width: 180px;margin-left: auto;margin-right: auto;">Nasze lokalizacje</h2>
+
+<div style="width:50%;float:left">
+    <h1 style="text-align: center;">
+        Pallotta Teamworks
+    </h1>
+    <!-- Dodajmy link do naszego obrazka z odpowiednim parametrem -->
+    <a [routerLink]="['/about/locations', 1]">
+        <img src="https://static.boredpanda.com/blog/wp-content/uploads/2014/01/amazing-creative-workspaces-office-spaces-15-1.jpg">
+    </a>
+</div>
+
+<div style="width:50%;float:left">
+    <h1 style="text-align: center;">
+        Zynga
+    </h1>
+    <!-- Dodajmy link do naszego obrazka z odpowiednim parametrem -->
+    <a [routerLink]="['/about/locations', 2]">
+        <img src="https://static.boredpanda.com/blog/wp-content/uploads/2014/01/amazing-creative-workspaces-office-spaces-11-1.jpg">
+    </a>
+</div>
+
+<!-- Oraz wspomniany we wpisie kontener dla komponentu -->
+<div class="inner-outlet">
+<router-outlet></router-outlet>
+</div>
