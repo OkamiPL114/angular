@@ -1,1 +1,50 @@
-<p>template-driven-form works!</p>
+<div class="row">
+    <div class="col-xs-12 col-lg-12">
+        <!-- Zmienna lokalna naszego formularz to #f - możesz śmiało zdefiniować inną -->
+        <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+            <div class="row">
+                <div class="col-sm-12 col-md-4 form-group">
+                    <label for="car-brand">Samochód</label>
+                    <input id="car-brand" type="text" class="form-control" name="carBrand" [ngModel]="'Audi RS6'" required
+                        #carBrand="ngModel">
+                    </div>
+                <div class="row">
+                    <!-- Korzystamy tutaj z właściwości błędów dostępnych w Angularze
+                    'dirty' oraz 'touched' zapobiegają wyświetleniu błędów bez interakcji użytkownika, tj. podczas ładowania formularza
+                    Więcej możecie przeczytać w oficjalnej dokumentacji dostępnej pod adresem:
+                    https://angular.io/guide/form-validation#why-check-dirty-and-touched -->
+                    <div style="color:red" *ngIf="carBrand.errors">
+                        <p *ngIf="carBrand.errors?.['required'] && (carBrand.dirty || carBrand.touched)">
+                            Nazwa samochodu jest wymagana!
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 form-group">
+                    <label for="car-description">Opis zamówienia</label>
+                    <input id="car-description" type="text" class="form-control" name="carDescription" ngModel required>
+                </div>
+                <div class="col-sm-12 col-md-4 form-group">
+                    <label for="car-amount">Ilość</label>
+                    <input id="car-amount" type="number" class="form-control" carAmount ngModel required>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-xs-12 col-lg-12">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-4 form-group">
+                        </div>
+                        <div class="col-sm-12 col-md-4 form-group">
+                            <button class="btn btn-success" type="submit">Dodaj</button>
+                            <button class="btn btn-danger" type="button">Usuń</button>
+                            <!-- Event Binding -->
+                            <button class="btn btn-primary" type="button" (click)="onClear()">Wyczyść</button>
+                        </div>
+                        <div class="col-sm-12 col-md-4 form-group">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
